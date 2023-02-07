@@ -12,7 +12,7 @@ const DrawerHeaderComponent = ({ navigation, route, options }: IDrawerHeaderComp
   //   const na = navigation.navigate('Week');
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => navigation.navigate('Week')}>
+      <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
         <MenuIcon fill="black" size={25} />
         {/* <Text style={{color: 'red'}}>{route.name}</Text> */}
       </TouchableOpacity>
@@ -24,6 +24,7 @@ export default DrawerHeaderComponent;
 
 const styles = StyleSheet.create({
   container: {
-    padding: 10
+    padding: 10,
+    // backgroundColor: 'transparent',
   }
 });
